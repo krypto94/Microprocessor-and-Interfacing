@@ -106,67 +106,7 @@ nmi_isr:		mov ax,996
          
 	
 		     
-			                
-        mov al,91h 		
-    	out creg1,al
-        
-        in al,porta1
-    	mov [bx],al   	 
-    	
-		                 mov al,00001010b
-                out creg2,al
-
-
-
-        mov al,91h 		
-    	out creg1,al
-
-        mov al,00000001b
-        out portb1,al
-		 		 
-    	mov al,00001110b  	;soc 0
-		out creg1,al
-          
-		
-		mov al,00001011b
-		out creg1,al		; ale 0  
-		           
-		
-		mov al,00001111b  	; soc 1
-		out creg1,al
-          
-		
-		mov al,00001010b
-		out creg1,al		;0 ale
-	                 
-		mov al,00001110b	 
-		out creg1,al
- 
-
-         
-	           lol1: in al,portc2
-                and al,00000001b
-                jz lol1
-                mov al,00001011b
-                out creg2,al         		                
-        mov al,91h 		
-        out creg1,al
-        
-        in al,porta1
-    	mov [bx+1],al  
-    	       mov al,00001010b
-                out creg2,al
-		   
-	  
-
-
-        mov al,91h 		
-		out creg1,al
-
-        mov al,00000010b
-        out portb1,al
-		 		 
-
+	
     	mov al,00001110b  	;soc  0
 		out creg1,al
           
